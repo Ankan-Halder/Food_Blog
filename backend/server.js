@@ -8,6 +8,10 @@ const product_routes = require("../backend/routes/products");
 //connecting to database
 const connectdb = require("../backend/db/connect");
 
+const cors = require("cors");
+
+app.use(cors());
+
 // Basic Server Setup
 app.get("/", (req, res) => {
   res.send("Food Blog Backend Home!!!");
